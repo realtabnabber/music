@@ -9,18 +9,22 @@
 	<link href="lib/defaultStyle.css" rel="stylesheet" type="text/css" />
 	<meta name="Description" content="Chords, notes, tab, tablature and sheet music for piano, keyboard, organ, synth, flute" />
 	<meta name="Keywords" content="piano organ flute notes notation tab tablature sheet music chord keyboard song classical jazz rock" />
+	<script type="text/javascript" src="lib/convertFunctions.js"></script>
+
 </head>
 	
 <body>
 
 	{% include header.html %}
-<img src="images/header3.jpg" />
-<br>
+
+	
   Convert a guitar tab...<br>
     
 	<form action="" method="GET" name="convForm">
       <textarea name="tabTxtArea" rows="2" cols="20" wrap="off" id="tabTxtAreaID" class="smallField" style="height:200px;width:400px;"></textarea>
-		<input type="button" value="Do Something!" name="B2" onClick="javascript:document.forms.convForm.tabTxtArea.value=''" />
+		<input type="button" value="convert" name="B1" onClick="javascript:convertGuitarToPiano();" />
+		<input type="button" value="Clear" name="B2" onClick="javascript:document.forms.convForm.tabTxtArea.value=''" />
+	  <textarea name="tabTxtArea2" rows="2" cols="20" wrap="off" id="tabTxtAreaID2" class="smallField" style="height:200px;width:400px;"></textarea>
 	</form>
 
 </body>
