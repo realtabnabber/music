@@ -11,11 +11,14 @@
 </head>
 	
 <body>
-<img src="images/header.jpg" />
+<img src="images/header3.jpg" />
 <br>
-  Convert a tab to something??<br>
+  Convert a tab to something!<br>
     
-      <textarea name="tabTxtArea" rows="2" cols="20" wrap="off" id="tabTxtAreaID" class="smallField" style="height:200px;width:400px;">
-</textarea>
+	<form action="" method="GET" name="convForm">
+      <textarea name="tabTxtArea" rows="2" cols="20" wrap="off" id="tabTxtAreaID" class="smallField" style="height:200px;width:400px;"></textarea>
+		<input type="button" value="Do Something!" name="B2" onClick="javascript:document.forms.convForm.tabTxtArea.value=''" />
+	</form>
+
 </body>
 </html>
