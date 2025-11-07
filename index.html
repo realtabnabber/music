@@ -20,11 +20,13 @@
 	
   Convert a guitar tab...<br>
     
-	<form action="" method="GET" name="convForm">
-      <textarea name="tabTxtArea" rows="2" cols="20" wrap="off" id="tabTxtAreaID" class="smallField" style="height:200px;width:400px;"></textarea>
-		<input type="button" value="convert" name="B1" onClick="javascript:convertGuitarToPiano();" />
-		<input type="button" value="Clear" name="B2" onClick="javascript:document.forms.convForm.tabTxtArea.value=''" />
-	  <textarea name="tabTxtArea2" rows="2" cols="20" wrap="off" id="tabTxtAreaID2" class="smallField" style="height:200px;width:400px;"></textarea>
+	<form action="" method="GET" name="tnForm">
+      <textarea name="inputText" rows="2" cols="20" wrap="off" id="inputTextID" class="smallField" style="height:200px;width:400px;"></textarea>
+		<br />
+		<input type="button" value="Convert" name="B1" onClick="javascript:convertGuitarToPiano();" />
+		<input type="button" value="Select All" name="B2" onClick="javascript:selectAllInput();" />
+		<br />
+	  <textarea name="outputText" rows="2" cols="20" wrap="off" id="outputTextID" class="smallField" style="height:200px;width:400px;"></textarea>
 	</form>
 
 </body>
