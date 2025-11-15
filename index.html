@@ -2,102 +2,160 @@
 ---
 
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" >
+<html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<meta charset="utf-8" />
-    
+
 	<title>	TabNabber - piano tabs, tablature, chords, sheet music, notes</title>
 	<link href="lib/defaultStyle.css" rel="stylesheet" type="text/css" />
 	<meta name="Description" content="Chords, notes, tab, tablature and sheet music for piano, keyboard, organ, synth, flute" />
 	<meta name="Keywords" content="piano organ flute notes notation tab tablature sheet music chord keyboard song classical jazz rock" />
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
 	<script type="text/javascript" src="lib/convertFunctions.js"></script>
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<style>
-* {
-  box-sizing: border-box;
-}
-.menu {
-  float: left;
-  width: 20%;
-}
-.menuitem {
-  padding: 8px;
-  margin-top: 7px;
-  border-bottom: 1px solid #f1f1f1;
-}
-.main {
-  float: left;
-  width: 60%;
-  padding: 0 20px;
-  overflow: hidden;
-}
-.right {
-  background-color: lightblue;
-  float: left;
-  width: 20%;
-  padding: 10px 15px;
-  margin-top: 7px;
-}
+	<style>
+		* {
+			box-sizing: border-box;
+		}
 
-@media only screen and (max-width:800px) {
-  /* For tablets: */
-  .main {
-    width: 80%;
-    padding: 0;
-  }
-  .right {
-    width: 100%;
-  }
-}
-@media only screen and (max-width:500px) {
-  /* For mobile phones: */
-  .menu, .main, .right {
-    width: 100%;
-  }
-}
-</style>
+		.menu {
+			float: left;
+			width: 20%;
+		}
+
+		.menuitem {
+			padding: 8px;
+			margin-top: 7px;
+			border-bottom: 1px solid #f1f1f1;
+		}
+
+		.main {
+			float: left;
+			width: 60%;
+			padding: 0 20px;
+			overflow: hidden;
+		}
+
+		.right {
+			background-color: lightblue;
+			float: left;
+			width: 20%;
+			padding: 10px 15px;
+			margin-top: 7px;
+		}
+
+		@media only screen and (max-width:800px) {
+			/* For tablets: */
+			.main {
+				width: 80%;
+				padding: 0;
+			}
+
+			.right {
+				width: 100%;
+			}
+		}
+
+		@media only screen and (max-width:500px) {
+			/* For mobile phones: */
+			.menu, .main, .right {
+				width: 100%;
+			}
+		}
+	</style>
 </head>
 <body>
 
 	{% include header.html %}
-	
-  <br>
-  <h1>Convert a guitar tab</h1>
-
-<div style="overflow:auto">
-  <div class="menu">
-    <div class="menuitem grey fontsize1-3b">Guitar to Piano</div>
-    <div class="menuitem grey">Transpose Tab (coming)</div>
-
-  </div>
-
-  <div class="main">
-  	<form action="" method="GET" name="tnForm">
-      <textarea name="inputText" rows="2" cols="20" wrap="off" id="inputTextID" class="smallField" style="height:200px;width:100%;"></textarea>
-		<br />
-        <a href="javascript:selectAllInput();">Select All</a><br />
-		<input type="button" class="padField fontsize1-1" value="Convert" name="B1" onClick="javascript:convertGuitarToPiano();" />
-		<input type="button" value="Select All" name="B2" onClick="javascript:selectAllInput();" />
-		<br />
-	  <textarea name="outputText" rows="2" cols="20" wrap="off" id="outputTextID" class="smallField" style="height:200px;width:100%;"></textarea>
-      <br />
-        <a href="javascript:selectAllInput();">Select All</a><br />
-	</form>
-    <h2>Amazing!</h2>
-    <img src="img_5terre.jpg" style="width:100%">
-  </div>
-
-  <div class="right">
-    <h2>What?</h2>
-    <p>How's it look</p>
-
-  </div>
-</div>
 
 
-<div style="background-color:#f1f1f1;text-align:center;padding:10px;margin-top:7px;font-size:12px;"> This web page is a part of a demonstration of fluid web design made by w3schools.com. Resize the browser window to see the content respond to the resizing.</div>
+	<div style="overflow:auto">
+		<div class="menu">
+			<div class="menuitem grey fontsize1-3b">Guitar Tabs</div>
+			<div class="menuitem grey">Piano Tabs (coming soon)</div>
+
+		</div>
+
+		<div class="main">
+
+			<h3>Your Guitar Tab</h3>
+
+			<form action="" method="GET" name="tnForm">
+				<span class="lPad10 demph">
+					[<a href="javascript:selectAllInput();">Select All</a>] &nbsp;&nbsp;
+					[<a href="javascript:seeExampleTab();">Show Example</a>]
+				</span>
+				<br />
+				<textarea name="inputText" rows="2" cols="20" wrap="soft" id="inputTextID" class="smallField"
+						  placeholder="Paste Your Guitar Tab Here"
+						  style="height:200px;width:100%;"></textarea>
+				<br />
+				<div class=" lPad20 vertPad10">
+					<input type="button" class="padField  fontsize1-1" value="Convert to Piano Tab" name="B1" onClick="javascript:convertGuitarToPiano();" />
+
+					<!--
+
+		 Auto Fix ( <a href="javascript:fixGuitar();"><img src='/images/instrumentsIconGtrFix.jpg' border='0' alt='Apply fixes for common guitar tab issues' title='Apply fixes for common guitar tab issues'></a>)
+
+
+		--chordize (prob not needed, side button)
+		--insert staff (prob not needed, will work differently for guitar vs piano, side button)
+
+			Stretch (needs input, may work differently for guitar vs piano, side button)
+		<input type="button" class="padField  demph disabled" value="Stretch" name="B1" onClick="javascript:alert(" coming soon");" />
+
+						replace (needs multiple inputs)
+
+						reverse (needs input, may work differently for guitar vs piano)
+
+						transpose / change pitch (needs input, will work differently for guitar vs piano)
+
+			-->
+
+
+				</div>
+				<h4>Your Piano Tab</h4>
+				<span class="lPad10 demph">
+					[<a href="javascript:selectAllOutput();">Select All</a>]
+				</span>
+				<textarea name="outputText" rows="2" cols="20" wrap="soft" id="outputTextID" class="smallField" style="height:200px;width:100%;"></textarea>
+
+			</form>
+			
+            <div class="pad20">
+                <!--<img border="0" src="images/37keymap.gif" style="width:100%">-->
+                <img border="0" src="images/49keymapShort.gif">
+
+                <!--<br /><br />
+    Layout: 37 keys | 	49 Keys | 61 Keys | 76 Keys | 88 Keys
+					-->
+            </div>
+		</div>
+
+		<div class="right">
+			<h3>What's Up?</h3>
+			<div class="vertPad10">
+				Find us at <a href="https://bsky.app/profile/tabnabber.bsky.social"><img border="0" src="https://web-cdn.bsky.app/static/favicon-16x16.png" />Bluesky</a>
+			</div>
+			<div class="vertPad10">
+				Email us at TabNabber<img border="0" src="images/atg.gif" class="vAlignMid">
+			</div>
+
+			<br />
+			<br />
+			<div class="vertPad10 fontsize9">
+				Last Updated: Nov 14, 2025
+			</div>
+		</div>
+	</div>
+
+
+	<div style="background-color:#f1ffff;text-align:center;padding:20px;margin-top:10px;">
+		&copy; TabNabber 2025
+	</div>
 
 </body>
 </html>
