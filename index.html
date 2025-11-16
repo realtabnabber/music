@@ -10,8 +10,8 @@
 	<link href="lib/defaultStyle.css" rel="stylesheet" type="text/css" />
 	<meta name="Description" content="Chords, notes, tab, tablature and sheet music for piano, keyboard, organ, synth, flute" />
 	<meta name="Keywords" content="piano organ flute notes notation tab tablature sheet music chord keyboard song classical jazz rock" />
-	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-16x16.png">
-	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-23x20.png">
 	<script type="text/javascript" src="lib/convertFunctions.js"></script>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -66,6 +66,17 @@
 			}
 		}
 	</style>
+	<script type="text/javascript" >
+        //var navToggle = false;
+        //function toggleNav() {
+        //    lNav.style.display = navToggle ? "none" : "block";
+        //    lNavS.style.display = navToggle ? "none" : "block";
+        //    navToggle = !navToggle;
+		function showPianoArea() {
+			document.getElementById("pianoArea").style.display = "";
+		}
+
+	</script>
 </head>
 <body>
 
@@ -94,7 +105,7 @@
 						  style="height:200px;width:100%;"></textarea>
 				<br />
 				<div class=" lPad20 vertPad10">
-					<input type="button" class="padField  fontsize1-1" value="Convert to Piano Tab" name="B1" onClick="javascript:convertGuitarToPiano();" />
+					<input type="button" class="padField  fontsize1-1" value="Convert to Piano Tab" name="B1" onClick="javascript: showPianoArea(); convertGuitarToPiano();" />
 
 					<!--
 
@@ -114,25 +125,29 @@
 						transpose / change pitch (needs input, will work differently for guitar vs piano)
 
 			-->
+				</div>
 
+				<div id="pianoArea" style="display:none;">
+				<h4>Your Piano Tab</h4>
+					<span class="lPad10 demph">
+						[<a href="javascript:selectAllOutput();">Select All</a>]
+					</span>
+					<textarea name="outputText" rows="2" cols="20" wrap="soft" id="outputTextID" class="smallField" style="height:200px;width:100%;"></textarea>
+					<br />
+					<br />
+                    <h4>Now Play It!</h4>
+					<div class="lPad20">
+						<!--<img border="0" src="images/37keymap.gif" style="width:100%">-->
+						UPPERcase = black keys, lowercase = white keys.<br />
+						<img border="0" src="images/49keymapShort.png">
+
+						<!--<br /><br />
+			Layout: 37 keys | 	49 Keys | 61 Keys | 76 Keys | 88 Keys
+							-->
+					</div>
 
 				</div>
-				<h4>Your Piano Tab</h4>
-				<span class="lPad10 demph">
-					[<a href="javascript:selectAllOutput();">Select All</a>]
-				</span>
-				<textarea name="outputText" rows="2" cols="20" wrap="soft" id="outputTextID" class="smallField" style="height:200px;width:100%;"></textarea>
-
 			</form>
-			
-            <div class="pad20">
-                <!--<img border="0" src="images/37keymap.gif" style="width:100%">-->
-                <img border="0" src="images/49keymapShort.gif">
-
-                <!--<br /><br />
-    Layout: 37 keys | 	49 Keys | 61 Keys | 76 Keys | 88 Keys
-					-->
-            </div>
 		</div>
 
 		<div class="right">
@@ -147,7 +162,7 @@
 			<br />
 			<br />
 			<div class="vertPad10 fontsize9">
-				Last Updated: Nov 14, 2025
+				Last Updated: Nov 16, 2025 <!-- Nov 14, 2025 init release --><!-- Nov 16, 2025 auto fix guitar tab strings missing pipes -->
 			</div>
 		</div>
 	</div>
