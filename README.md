@@ -1,2 +1,2 @@
-# tabdab.github.io
-test tab dab 3
+From the creators of TabNabber.com.
+Tools for piano and guitar tabs.
