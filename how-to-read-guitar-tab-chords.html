@@ -1,0 +1,766 @@
+---
+---
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+
+	<title>	TabNabber tools for piano and guitar tabs, tablature, chords, sheet music, notes</title>
+	<link href="lib/defaultStyle.css" rel="stylesheet" type="text/css" />
+	<meta name="Description" content="Chords, notes, tab, tablature and sheet music for piano, keyboard, organ, synth, flute" />
+	<meta name="Keywords" content="piano organ flute notes notation tab tablature sheet music chord keyboard song classical jazz rock" />
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-23x20.png">
+	<script type="text/javascript" src="lib/convertFunctions.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+	{% include header.html %}
+
+	<div style="overflow:auto">
+		<div class="menu">
+			
+			{% include left.html %}
+
+		</div>
+		
+		<div class="main">
+
+			<div class=" pad10">
+
+
+				<div class="lPad10">
+
+					<h2 class="inlineBlock">
+						How to Read Guitar Tabs and Chords
+					</h2>
+
+					<div class="lPad20">
+						<p class="space1-6">
+
+							<a name="#top"></a>
+
+							<div align="center">
+								
+								<img src="images/star3G.gif" />&nbsp;&nbsp;
+								<img src="images/star1G.gif" />&nbsp;
+								<img src="images/star2G.gif" />&nbsp;<h3 class="grey-2 inlineBlock">A Guide to the Guitar Galaxy</h3>&nbsp;
+								<img src="images/star1G.gif" />
+								<img src="images/star2G.gif" />
+								<img src="images/star3G.gif" />&nbsp;
+								<img src="images/star2G.gif" /><br />
+							</div>
+
+						<p align="center">
+
+						</p>
+
+						
+						<a name='whatistab'>&nbsp;</a>
+						<h3>
+							What is Tab?
+						</h3>
+
+						<div class="lPad20">
+							<p class="space1-8">
+								&quot;Guitar Tab&quot; (more boringly known as &quot;tablature&quot;) is a method of writing down
+								(or transcribing) the notes and chords in music. Similar to traditional <a href="how-to-read-sheet-music-notes.html"><b>sheet music</b></a>
+								but simpler and less detailed, tabs have flourished in the internet age due to how easy they are to create and share,
+								enabling anyone anywhere to tab, collab, show and grow their music mojo. Fa sho.
+							</p>
+
+							<!--<p class="space1-8">
+								The format of guitar tablature as described below is an
+								unofficial standard used by 99% of tabs and guitarists.
+								Keep your tabs in this standard format and we'll
+								<b><a href="/play/?instrType=7">play your guitar tabs as midis</a></b>.
+								You're arrived here, friend, at what could be (but isn't) the only place in the universe where you can do so for free (guaranteed or your money back!).
+								Congratulations, you lucky bastard.
+
+							</p>-->
+						</div>
+
+
+						<a name='thebasics'>&nbsp;</a>
+						<h3>Reading Guitar Tabs (simple):</h3>
+
+						<div class="lPad20">
+							<p class="space1-8">Guitar tabs simply indicate notes to play - strings to strum and frets to fret.</p>
+							<p class="space1-8">Tab is read from top to bottom and left to right.</p>
+							<p class="space1-8">
+								Tab is typically written in sections of 6 lines (or 4 lines for bass guitar) with each line representing a string on the guitar.
+								The top line is the highest pitch &quot;e&quot; string. The bottom line is the lowest pitch &quot;e&quot; string.
+								If the string names aren't given explicitly, assume normal tuning. Here are some blank tab lines with only the string names:
+							</p>
+
+							<b>Guitar Tab (normal tuning)</b>
+							<br />
+<pre class="sample">E|-----------------------
+B|-----------------------
+G|-----------------------
+D|-----------------------
+A|-----------------------
+E|-----------------------</pre>
+							<br /><br />
+							<b>Bass Tab (normal tuning)</b>
+							<br />
+							<pre class="sample">G|-----------------------
+D|-----------------------
+A|-----------------------
+E|-----------------------
+</pre>
+
+
+
+							<p class="space1-8">Eh? Unless you love the sound of silence, these tabs suuuuck... so let's add some notes!</p>
+							<p class="space1-8">
+
+								When a number appears on the line it's our signal to pluck the string, the number shows you which fret to depress with your fretting finger. <br />
+								A &quot;0&quot; means to play the open string (without pressing any frets). <br />
+								A &quot;1&quot; means to play the string with your finger pressed down on the 1st fret.
+
+							</p>
+
+
+<pre class="sample">E|----------------------
+B|----------------------
+G|----------------------
+D|----------------------
+A|----------------------
+E|---0--1--2------------
+							<a href="/documents/guitarTabMidis/guitar1.mid"><img border="0" src="/images/chords/playButton.gif" lowsrc="Play!" alt="Play!" class="vAlignMid" /></a> <span class="demph">&lt;- Click to play as midi!</span></pre>
+
+
+							<p class="space1-8">These are the notes E, F, and F# played on the bottom E starting with the open string and moving down the frets one at a time.</p>
+							<p class="space1-8">
+								When two or more notes are written on top of one another, it means to play all the notes together as a chord.
+								For example:
+							</p>
+
+<pre class="sample">E|----3-----------------
+B|----3-----------------
+G|----4-----------------
+D|----5-----------------
+A|----5-----------------
+E|----3-----------------
+							<a href="/documents/guitarTabMidis/gtar2.mid"><img border="0" src="/images/chords/playButton.gif" lowsrc="Play!" alt="Play!" /></a></pre>
+
+							<p class="space1-8">
+								The same chord could also be written like this:
+
+							</p>
+
+<pre class="sample">E|--------3-------------
+B|-------3--------------
+G|------4---------------
+D|-----5----------------
+A|----5-----------------
+E|---3------------------
+							<a href="/documents/guitarTabMidis/gtar3.mid"><img border="0" src="/images/chords/playButton.gif" lowsrc="Play!" alt="Play!" /></a></pre>
+
+							<p class="space1-8">
+
+								The slight vertical offset simply means to strum the chord more slowly (starting with the bottom string).
+								Each string is strummed slightly later than the previous string, but all the strings are played with one swipe of your strumming hand.
+							</p>
+							<p class="space1-8">
+								Here is the same chord again but with bigger gaps between the notes:
+							</p>
+
+<pre class="sample">E|-----------------3-----------------
+B|--------------3--------------------
+G|-----------4-----------------------
+D|--------5--------------------------
+A|-----5-----------------------------
+E|--3--------------------------------
+							<a href="/documents/guitarTabMidis/guitar4.mid"><img border="0" src="/images/chords/playButton.gif" lowsrc="Play!" alt="Play!" /></a></pre>
+
+							<p class="space1-8">
+
+								To play this you would likely pick each string separately (rather than strumming all the strings together in one swipe of your paw).
+								Since the notes above are all evenly spaced one can assume that they are all the exact same duration.
+								Now let's see what happens when that isn't the case.
+							</p>
+						</div>
+
+
+						<a name="timing">&nbsp;</a>
+						<h3>Timing:</h3>
+
+						<div class="lPad20">
+
+							<p class="space1-8">
+								Horizontal space (filled with dashes) is used for the passage of time. More space between the notes indicates more time between the notes.
+								Hear the extended pause before the "4" is finally played? That's what I'm talking about!
+							</p>
+
+<pre class="sample">    happy birthday    to...    you    
+e|--------------------------|---------|
+b|--------------------------|---------|
+g|--------------------------|---------|
+d|-------------------0------|---------|
+a|-0---0-2-----0------------|----4----|
+e|--------------------------|---------|
+							<a href="/documents/guitarTabMidis/guitarHappy.mid"><img border="0" src="/images/chords/playButton.gif" lowsrc="Play!" alt="Play!" /></a></pre>
+
+							<p class="space1-8">
+
+								Note: The '<b>|</b>' (pipe) characters (seen above around the '4') are bar markers that separate measures/sections
+								of notes to help provide a clearer visual structure. The bars do not count in the passage of time.
+
+							</p>
+						</div>
+
+						<p class="space1-8">&nbsp;</p>
+
+						<a name="chords">&nbsp;</a>
+						<h3>Chords in a Tab:</h3>
+
+
+						<div class="lPad20">
+							<p class="space1-8">
+								Most songs can be broken down into just a few chords (2 or more notes played simultaneously).
+								Tabs with chords are easier to read, write and play!
+								For example, you could write a D7 like this:
+							</p>
+
+<pre class="sample">E|---2---
+B|---1---
+G|---2---
+D|---0---
+A|---0---
+E|-------</pre>
+
+							<br />
+							Or like this:<br /><br />
+
+						</div>
+
+						<div class="lPad20 fontsize1-3">
+							[<b><a class="chord" href="javascript:pc('/chords/guitar/midis/D7.mid')">D7<span class="tooltip"><big>D7</big><br>
+							<img align="top" src="/chords/guitar/images/D7.gif"></span></a></b>]
+
+
+
+						</div>
+						<p class="space1-8">
+							This shorthand notation is nice and easy, yes? Using chord names can save you time, space and 15% or more on car insurance.
+							Damn you insurance gecko get out of my head!
+						</p>
+
+						<p class="space1-8">
+							We'll automatically link chords in brackets like the one above with our handy (and handsy) chord charts.
+							For a complete [half-assed] chord reference, see our
+							<a href="/music/?tabID=5934&sArtist=Chord+Charts&sName=Guitar+Chart+Diagrams"><b>most popular guitar chord charts</b></a>.
+							Here's how to read these chord charts:
+						</p>
+
+						<a name="Guitar Chord Chart Diagram">&nbsp;</a>
+						<h3>Reading Guitar Chord Chart Diagrams:</h3>
+						<br>
+						<div class="lPad20">
+
+							&nbsp;<img border="0" src="images/guitar_chord_diagram.png" />
+
+						</div>
+
+						<p class="space1-8">
+							<b>SPOILER ALERT</b>: There are actually multiple ways to play any given chord and still hit all the right notes.
+							If you're the type of dude who delights in details,
+							you can explicitly define how each chord should be played like this:
+						</p>
+
+						<div class="lPad20">
+
+<pre class="sample">
+Here's my big 
+ [<b><a class="chord" href="javascript:pc('/chords/guitar/midis/D7.mid')">D7<span class="tooltip"><big>D7</big><br><img align="top" src="/chords/guitar/images/D7.gif"></span></a></b>]
+EADGBE     &lt;-String names
+-00212     &lt;-Frets</pre>
+
+							<p class="space1-8">
+								With this you can create your own chord adventure to define chords any way you wish!<br />
+								Note: in this chord form, we've seen an '<b>x</b>' sometimes being used instead of a '<b>-</b>' to indicate to not play the string.
+								We do not recommend this to avoid confusion as an '<b>x</b>' usually means to play the string muted, and only mention it here to help
+								you understand these bastard chorded tabs.
+							</p>
+							<p class="space1-8">
+								<b>Slash Chords</b>
+								<br />
+
+								You may come across some chords like this: [<a class="chord" href="javascript:pc('/chords/guitar/midis/G.mid')"><b>G/A</b><span class="tooltip"><big>G/A</big><br><img align="top" src="/chords/guitar/images/G.gif" /></span></a>],
+								and notice that its chord chart looks just a [<a class="chord" href="javascript:pc('/chords/guitar/midis/G.mid')"><b>G</b><span class="tooltip"><big>G</big><br><img align="top" src="/chords/guitar/images/G.gif" /></span></a>] chord chart.
+								They are almost the same chord, but the slash in [G/A] indicates
+								there is an additional &quot;A&quot; note. Chords with the slash (&quot;/&quot;)
+								are called &quot;<b>slash chords</b>&quot; (or split chords). It's really just a regular chord with an additional bass note. The slash
+								separates the chord name and the bass note. So the [G/A] chord is actually an
+								&quot;G&quot; major chord with a lower &quot;A&quot; bass note added to it. [D/Bb] would be a &quot;D&quot; major chord with a &quot;Bb&quot; note added to
+								it.
+							</p>
+						</div>
+
+						<p class="space1-8">&nbsp;</p>
+						<a name="Advanced symbols in Tab"></a>
+						<h3>Advanced Symbols</h3>
+
+					
+
+						&nbsp;
+						<div class="lPad20">
+							<table class="altBackColor">
+
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b>h</b></td>
+									<td>
+										hammer on (also written as <b>^</b> - for a hammer on or pull off)
+									</td>
+								</tr>
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b>p</b></td>
+									<td>
+										pull off
+									</td>
+								</tr>
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b>b</b></td>
+									<td>
+										bend string up
+									</td>
+								</tr>
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b>r</b></td>
+									<td>
+										release bend
+									</td>
+								</tr>
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b>/</b></td>
+									<td>
+										slide up (also written as "<b>s</b>" - for an up or down slide)
+									</td>
+								</tr>
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b>\</b></td>
+									<td>
+										slide down
+									</td>
+								</tr>
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b>v</b></td>
+									<td>
+										vibrato (not to be confused with
+										<!--<a href="/FORUM2/display_message.asp?mid=219&tid=219&tName=Tremolo&fid=4&fName=Terminology+%2F+Definitions"></a>-->tremolo).
+										Also written as "<b>~</b>". Created by wiggling the string back and forth at the frets.
+									</td>
+								</tr>
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b>t</b></td>
+									<td>
+										note is tapped.
+										As taps can be done with either hand, you may see an <b>L</b> or <b>R</b> next to the <b>t</b> (indicating the <b>L</b>eft or <b>R</b>ight hand).
+										Otherwise, assume the Right Hand (strumming hand).
+									</td>
+								</tr>
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b>x</b></td>
+									<td>
+										play string muted - with heavy damping to get a choppy, percussive sound.
+										Use your fretting hand to lightly damp the string so that when played it sounds dead.<br />
+										Note that the use of an <b>x</b> in a tab line is different from the use of
+										an "<b>x2</b>" found at the end of a line, like...
+									</td>
+								</tr>
+								<tr><td class="vAlignTop monospaceFont fontsize1-2"><b>x2</b></td><td> indicates the preceding staff lines (everything to the left) should be repeated the number of times indicated (2 in this example).</td></tr>
+								<tr><td class="vAlignTop monospaceFont fontsize1-2"><b>&gt;&gt;</b></td><td> indicates the note should be held/sustained.</td></tr>
+								<tr><td class="vAlignTop monospaceFont fontsize1-2"><b>.</b></td><td> indicates the note should be cut (for a 
+                                          <!--<a href="/FORUM2/display_message.asp?mid=227&tid=227&tName=Staccato&fid=4&fName=Terminology+%2F+Definitions"></a>-->
+									staccato effect).</td></tr>
+
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b>()</b></td>
+									<td>
+										used around notes to signify grace notes (or sometimes optional notes).
+									</td>
+								</tr>
+								<tr>
+									<td class="vAlignTop monospaceFont fontsize1-2"><b><></b></td>
+									<td>
+										used around notes to signify both natural harmonics (at the 5th, 7th and 12th frets)
+										and the (even more difficult to play) artificial, or pinched, harmonics.
+									</td>
+								</tr>
+
+							</table>
+						</div>
+
+
+
+
+
+
+						&nbsp;
+						<a name='hammer'>&nbsp;</a>
+
+						<h3>Hammer ons</h3>
+						<div class="lPad20">
+							<p class="space1-8">
+								<b>Hammer ons</b> are played by quickly and firmly pressing a finger on the fret (without picking the string).
+								In this example the open A string is with a finger on the 1st fret and then the 3rd fret is "hammered"
+								(without the string being picked):
+
+							</p>
+
+
+<pre class="sample">
+E|----------------------
+B|----------------------
+G|----------------------
+D|----------------------
+A|--1h3-----------------
+E|----------------------
+							<a href="/documents/guitarTabMidis/guitarHammer.mid"><img border="0" src="/images/chords/playButton.gif" lowsrc="Play!" alt="Play!" /></a>
+</pre>
+						</div>
+
+						&nbsp;
+						<a name='pulloff'>&nbsp;</a>
+
+						<h3>Pull offs</h3>
+						<div class="lPad20">
+							<p class="space1-8">
+								<b>Pull offs</b> are played by quickly releasing a finger on a fret (without picking
+								the string). In this example the A string is picked once with the 1st fret held down briefly and then released.
+								The quick release is the pull off, done correctly it will result in the open string being heard:
+							</p>
+<pre class="sample">
+E|----------------------
+B|----------------------
+G|----------------------
+D|----------------------
+A|--1p0-----------------
+E|----------------------
+							<a href="/documents/guitarTabMidis/guitarPulloff.mid"><img border="0" src="/images/chords/playButton.gif" lowsrc="Play!" alt="Play!" /></a>
+</pre>
+
+							<p class="space1-8">
+								In both hammer ons and pull offs, the second note tends to be less loud than the
+								first (especially on an acoustic). A slight sideways motion of the
+								fretting finger while pulling off will add extra vibration to the string and
+								give you some extra volume.
+							</p>
+						</div>
+
+
+						&nbsp;
+						<a name="BENDS">&nbsp;</a>
+						<h3>Bends</h3>
+						<div class="lPad20">
+							<p class="space1-8">
+								Bending a string (without a whammy bar) is accomplished by applying sideways tension to the string (with the fretting hand)
+								which raises the pitch of a note.
+								Bends are more difficult on acoustic guitar than electric,
+								and become easier as you move down the neck (into higher fret numbers).
+								Around the 5th+ fret anyone should be able to bend a string up to the next
+                                <!--<a href="/FORUM2/display_message.asp?mid=11725&tid=11725&tName=Semitone&fid=4&fName=Terminology++Definitions"></a>-->semitone.
+								<br /><br />
+								When you see a "b" next to a fret number you know a bend is coming.
+								How much to bend the note up is indicated in the number that follows the "b".
+								For example, here we would pick the "E" string on the 5th fret then apply enough bend pressure to the string to raise the pitch up so it
+								sounds just like the 6th fret:
+							</p>
+
+
+
+<pre class="sample">Bend up
+E|-------------------
+B|-------------------
+G|-------------------
+D|-------------------
+A|-------------------
+E|--5b6--------------
+</pre>
+
+						</div>
+
+
+
+						&nbsp;
+						<h3>Bend Release</h3>
+						<div class="lPad20">
+							<p class="space1-8">
+								Releasing a bend restores the pitch back down to its original tone by releasing the horizontal tension on the fret.
+								Here's an example where we pluck the E string while pressing down on the 5th fret,
+								bend the string's pitch up to sound like the 6th fret, then release the bend to again sound like the 5th fret:
+							</p>
+
+
+
+<pre class="sample">Bend up and back down
+E|-------------------
+B|-------------------
+G|-------------------
+D|-------------------
+A|-------------------
+E|--5b6r5------------
+</pre>
+
+						</div>
+
+						<a name="SLIDES">&nbsp;</a>
+						<h3>Slides</h3>
+						<div class="lPad20">
+
+							<p class="space1-8">
+								Ready to slide your fretting hand up and down that sexy neck of a guitar you got there? <br /><br />
+								The <span class=" monospaceFont fontsize1-2"><b>/</b></span>, <span class=" monospaceFont fontsize1-2"><b>\</b></span> and
+								<span class=" monospaceFont fontsize1-2"><b>s</b></span> characters
+								between two numbers tells you the frets to begin and end on during your slide journey.
+								And if you can remember which type of slash is a backslash and which is a forward slash, congratulations. Nerd.
+								<br /><br />
+								In this example we would pluck the "B" string with our finger on the first fret, then slide
+								from the 1st fret down to the 5th fret.
+							</p>
+
+<pre class="sample">Slide
+E|------------
+B|--1/5-------
+G|------------
+D|------------
+A|------------
+E|------------</pre>
+
+						</div>
+
+
+						<br /><br /><br />
+
+						<a name="tips">&nbsp;</a>
+						<h2>Tabbing Tips</h2>
+
+						<p class="space1-8 lPad20">
+							Ready to share your musical and tabbing talents with the world?
+							Follow these tips to make your tabs ass kickin, guitar shreddin good.
+						</p>
+
+						<h4>Monospace fonts</h4>
+
+
+						<div class="lPad20">
+							<p class="space1-8">
+
+								If you write a tab outside of TabNabber for some reason, FU! JK. Just make sure the font is monospace (characters all the same
+								width), &quot;<span class="monospaceFont">Courier</span>&quot; and &quot;<span class="monospaceFont">Courier New</span>&quot; are common.
+								If an "<span class=" monospaceFont"><b>m</b></span>" isn't the same width an "<span class=" monospaceFont"><b>i</b></span>" character,
+								your tab will be so hard to space out correctly it will suck so much it'll make sex workers gawk.  :o
+
+							</p>
+						</div>
+
+
+						<h4>Define Tab Symbols</h4>
+						<br />
+
+						<div class="lPad20">
+							<b>Example Symbol Legend (for your copy/paste needs)</b>:
+							<br />
+
+<pre class="sample">  h  - hammer on
+  p  - pull off
+  b  - bend
+  r  - release bend
+  /  - slide
+  v  - vibrato
+  t  - tap
+  x  - play string muted
+  x2 - repeat number of times shown
+  >> - hold note
+  .  - cut off note
+  () - grace notes
+  <> - harmonics
+</pre>
+							<p class="space1-8">
+								Including a symbol legend is always helpful for your readers, especially
+								if you deviate from the standard set of <a href="#Advanced symbols in Tab">symbols</a>.
+								More advanced playing techniques (such as grace notes and harmonics) aren't often seen in the wild,
+								so if you are going to include them you should definitely include a legend. For example, this tab shows
+								a grace note on the 10th fret and a harmonic on the 12th:
+							</p>
+<pre class="sample">
+    () - grace notes
+    <> - harmonics
+E|----------------------
+B|----------------------
+G|----------------------
+D|----------------------
+A|----------------------
+E|--(10)11-----&lt;12&gt;-----
+</pre>
+
+						</div>
+						&nbsp;
+
+						<h4>Include Section Labels</h4>
+
+						<div class="lPad20">
+							<p class="space1-8">
+								Most songs have sections that repeat throughout (eg: CHORUS, VERSE, RIFF 1, RIFF 2, etc) - so if you label these sections
+								you can keep your tab shorter and easier to read.
+							</p>
+						</div>
+
+						&nbsp;
+
+
+						<h4>Lyrics</h4>
+						<div class="lPad20">
+							<p class="space1-8">
+								Having at least a few lyrics to follow and line up to a tab makes it easier to understand the timings in the song in the highly likely
+								event that the tab doesn't have perfect timing.
+								If nothing else, tabs that include a lyric here and there should be more popular,
+								as the lyrics will help more people find it on the google.
+							</p>
+						</div>
+
+						&nbsp;
+
+						<h4>Include Other Details</h4>
+
+						<div class="lPad20">
+							<p class="space1-8">
+
+								Including metadata (other information about the song) such as other artists, composers, or if the song is heard
+								in a film, tv show or commercial
+								is always interesting and will help more people find your tab in the google.
+							</p>
+						</div>
+
+
+
+						<!--<p class="space1-8">
+							Indicating features such as alternative tunings and use of capos
+							will help your fellow musicians hit the right notes and understand the playing style.
+						</p>
+
+
+						For a tab using a capo, it's standard practice to write the
+						numbers of the frets relative to the position of the capo.
+						If you had a D major shape with a capo at the 2nd fret
+						the tab would be :-->
+
+
+
+
+
+						&nbsp;
+
+						<h4>Avoid the Crowd - it's a funkin' pandemic FOR THE LOVE OF GOD</h4>
+
+						<div class="lPad20">
+
+							<p class="space1-8">
+								In the tab below, are you supposed to play 1-2-1, or 12-1, or 1-21?
+							</p>
+
+
+							<b>Hard to read and... THE NOTES GOT COVID!</b>
+							<br />
+<pre class="sample">E|-------|
+B|--121--|
+G|-------|
+D|-------|
+A|-------|
+E|-------|
+
+feelingclaustrophobic?
+</pre>
+
+							<br />
+							<br />
+
+							<b>Easy to read</b>
+							<br />
+<pre class="sample">E|--------------|
+B|--1-2-1-------|
+G|--------------|
+D|--------------|
+A|--------------|
+E|--------------|
+
+m u c h   b e t t e r
+</pre>
+							<p class="space1-8">
+								<b>Moral</b>: keep at least one space (or dash) between each separate note.
+							</p>
+						</div>
+						<br />
+
+
+					<p class="space1-8">
+						<span class=" fontsize1-2">
+							
+								<b>
+									Have
+									an addition or improvement to the tab notation?
+								</b>
+							 We're all ears. Maybe half an ear.
+
+						</span>
+					</p>
+
+					<a href="#top">[Back To The Top]</a>
+					<br /><br />
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+					</p>
+
+				</div>
+
+
+
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+
+			<div class="vertPad10 fontsize9">
+				Last Updated: Nov 19, 2025 
+			</div>
+
+
+
+		</div>
+
+
+		{% include right.html %}
+
+	</div>
+
+
+	{% include footer.html %}
+
+</body>
+</html>
+

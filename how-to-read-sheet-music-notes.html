@@ -1,0 +1,535 @@
+---
+---
+
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta charset="utf-8" />
+
+	<title>	TabNabber tools for piano and guitar tabs, tablature, chords, sheet music, notes</title>
+	<link href="lib/defaultStyle.css" rel="stylesheet" type="text/css" />
+	<meta name="Description" content="Chords, notes, tab, tablature and sheet music for piano, keyboard, organ, synth, flute" />
+	<meta name="Keywords" content="piano organ flute notes notation tab tablature sheet music chord keyboard song classical jazz rock" />
+	<link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="images/favicon-23x20.png">
+	<script type="text/javascript" src="lib/convertFunctions.js"></script>
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+<body>
+
+	{% include header.html %}
+
+	<div style="overflow:auto">
+		<div class="menu">
+			
+			{% include left.html %}
+
+		</div>
+		
+		<div class="main">
+
+			<div class=" pad10">
+
+
+				<div class="lPad10">
+
+					<h2  id="ref" class="inlineBlock">
+						How to read Sheet Music / Notes - A Quick Reference
+					</h2>
+
+					<div class="lPad20">
+						<p class="space1-6">
+
+
+
+
+
+						<p class="space1-8">
+							<span class="blockBox rPad20">
+								<b>The Notes</b>:<br />
+								<img border="0" src="images/SheetMusicNoteLegend2.gif" />
+							</span>
+
+							<span class="blockBox rPad20">
+								<b>Timing Durations for Notes</b>:<br />
+								<img border="0" src="images/notesTimingLegend3.gif" title="Different types of notes indicate the length of time (or duration) a note is played." />
+								<br />
+								<b>Tied Notes</b>:<br />
+								<img border="0" src="images/notesTimingLegend2.gif" title="A dotted note's duration is equal to the note's duration plus half the original duration." />
+								<br />
+								<b>Timing Durations for Rests</b>:<br />
+								<img border="0" src="images/restsTimingLegend.gif" title="Different types of rests indicate the length of time (or duration) a rest is held." />
+								<br />
+
+							</span>
+
+							<span class="blockBox">
+								<b>Accidentals:</b>
+								<br />
+								&nbsp;&nbsp;&nbsp;<img border="0" src="images/s.gif" /> = sharp<br />
+								&nbsp;&nbsp;&nbsp;<img border="0" src="images/flat.gif" /> = flat<br />
+								&nbsp;&nbsp;&nbsp;<img border="0" src="images/natural.gif" /> = natural
+
+
+							</span>
+
+
+							<br />
+							<b>Understanding these symbols enables you to read most types of sheet music.</b>
+						</p>
+						<br />
+
+						<h1 id="beginners" class="fontsize2">Sheet Music Basics for Beginners</h1>
+						<br />
+						<p class="space1-8">
+							Music is all about the notes, baby.
+							So let's get to better know the notes.
+							In its simplest form (excluding sharps and flats) there are only 7 notes that repeat
+							over many octaves.
+							(<b>Octaves</b> tell us how high or low pitched the note is.
+							Higher octave = higher pitch.)
+							The seven notes have the following names:
+							<br />
+							<span class="fontsize1-3">
+								<b>Do</b>, <b>Re</b>, <b>Mi</b>, <b>Fa</b>, <b>So</b>, <b>La</b>, <b>Ti</b>.
+							</span>
+							<br />
+							Just kidding. Unless you starred in <i>The Sound of Music</i> or reside in Europe.
+							But even so, it's time to hear the truth.
+							Those little latin-ish words are cute but ridiculous.
+							Here are the <i>real</i> names for the seven notes:
+							<br />
+							<span class="fontsize1-3">
+								<b>A</b>, <b>B</b>, <b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, <b>G</b>.
+							</span>
+							<br />
+							It's a seven letter alphabet, pretty easy right? Nope.
+							The notes actually start with "C", just to make sure it isn't <i>too</i> easy for beginners to understand.
+							In other words:<br />
+							<span class="fontsize1-3">
+								<b>C</b>, <b>D</b>, <b>E</b>, <b>F</b>, <b>G</b>, <b>A</b>, <b>B</b>.
+							</span>
+							<br />
+
+							See what happened there? "A" and "B" got sent to the back. Once past "G", the notes start over at "A".
+							<br />
+							There are also steps between the notes called sharps and flats.
+							If you include the sharps (<img src="images/s2.gif" />) or flats (<img src="images/flat2.gif" />)
+							there are actually 12 notes that repeat over many octaves:
+						</p>
+						<span class="fontsize1-3">
+							<b>C</b>, <b>C<img src="images/s2.gif" /></b>, <b>D</b>, <b>D<img src="images/s2.gif" /></b>, <b>E</b>, <b>F</b>, <b>F<img src="images/s2.gif" /></b>, <b>G</b>, <b>G<img src="images/s2.gif" /></b>, <b>A</b>, <b>A<img src="images/s2.gif" /></b>, <b>B</b>.<br />
+						</span>
+						<span class="grey">
+							- - or - -
+						</span>
+						<br />
+						<span class="fontsize1-3">
+							<b>C</b>, <b>D<img src="images/flat2.gif" /></b>, <b>D</b>, <b>E<img src="images/flat2.gif" /></b>, <b>E</b>, <b>F</b>, <b>G<img src="images/flat2.gif" /></b>, <b>G</b>, <b>A<img src="images/flat2.gif" /></b>, <b>A</b>, <b>B<img src="images/flat2.gif" /></b>, <b>B</b>.<br />
+						</span>
+						<p class="space1-8">
+							Sharps and flats can usually be used interchangeably (C♯ = D♭), though there are rules (surprise!)
+							when you should use one or the other. You don't want to know.
+							Some instruments can play half (and even less!) of a sharp or flat.
+							We don't want to know. You may have noticed that we didn't list an E♯, B♯, C♭ or F♭ above and thought,
+							"<i>What's up with that? Those morons forgot about 4 notes!</i>" Well aren't you observant?
+							Technically you are right, smart guy, all of the notes do have sharps and flats and we didn't list them all.
+							We did this on purpose.
+							It is redundant to list them because the sharps and flats of some notes are actually identical to
+							their adjacent note. For instance, E♯ is technically an F, and F♭ is technically an E.
+							<br /><br />
+
+							Now that you've been properly introduced to the note names, let's see what they look like in sheet music.
+						</p>
+						<div class="imgDesc">
+							<img src="images/staff-stave.png" />
+
+							<h2>Staff / Stave</h2>
+							<div class="vertPad10">Lazy lines lying down on the job.</div>
+						</div>
+
+						<div class="imgDesc topPad20">
+							<img src="images/a-note.png" />
+							<h2>A Note on a staff</h2>
+							<h4 class="vertPad10">Indicates the pitch/tone and duration</h4>
+
+							Our happy little oval friends. Some are solid black, others a hollowed out shell of their former selves.
+							Some have sticks up their butts, others have flags.
+							These differences indicate how long the note should last.
+							<a href="#ref">See the quick reference above</a>.
+
+						</div>
+						<br />
+						<div class="imgDesc">
+							<img src="images/treble-clef.png" />
+							<br />
+							<h2>The Treble Clef</h2>
+							<h4 class="vertPad10">For higher pitched notes</h4>
+							Stay out of treble if you're a Tuba.
+						</div>
+						<br />
+						<div class="imgDesc">
+							<img src="images/bass-clef.png" />
+							<h2>The Bass Clef</h2>
+							<h4 class="vertPad10">For lower pitched notes</h4>
+							Reserved for Barry White, Darth Vader and YOUR MOM! Oh!
+						</div>
+
+						<p class="space1-8">
+							The exact note to play is denoted (pun intended) by the clef <i>and</i> the vertical location of the note on the staff.
+							Side note:  I once entered ten puns in a pun contest thinking at least one of them would win, but <b>no pun in ten did</b>.
+							haha!
+							Let's have a look at what appears to be the same note on the treble clef and the bass clef.
+							For instance:
+						</p>
+						<div class="imgDesc">
+							<img src="images/treble-clef-b.png" />
+							<br />
+							<h2>"B" Note on the Treble Clef</h2>
+
+						</div>
+						<br />
+						<div class="imgDesc">
+							<img src="images/bass-clef-d.png" />
+							<h2>"D" Note on the Bass Clef</h2>
+
+						</div>
+
+						<p class="space1-8">
+
+							This is pretty stupid. The creators of sheet music apparently wanted to make sure that no one could understand what they had created.
+							But wait, it gets worse! There are even more clefs! We'll spare you the details, as
+							the treble and the bass clefs are by far the two most common.
+						</p>
+						<p class="space1-8">
+							Ready to throw down sheet music and take up juggling yet? We don't blame you.
+							Just like the people who love it, <b>sheet music is complicated</b>. I'm talking to you, Allison.
+							Because of this, well intentioned music teachers often resort to using mnemonic devices
+							to help remember the note names.
+							You may have heard "<b>E</b>very <b>G</b>ood <b>B</b>oy <b>D</b>oes <b>F</b>ine"
+							as a way to remember the notes on the lines in the treble clef, "<b>E</b>, <b>G</b>, <b>B</b>, <b>D</b>, <b>F</b>"
+							(because reading from bottom to top just makes sense).
+							For the notes in between the treble clef lines, just remember
+							"<b>F</b>, <b>A</b>, <b>C</b>, <b>E</b>", which is probably what you are palming right now.
+						</p>
+						<span class="rPad20">
+							<img src="images/treble-clef-notes.png" />
+						</span>
+						<span>
+							<img src="images/treble-clef-open-notes.png" />
+						</span>
+						<p class="space1-8">
+							For the bass clef, it's just a matter of memorizing "<b>G</b>ood <b>B</b>oys <b>D</b>o <b>F</b>ine <b>A</b>lways"
+							to remember the notes on the lines and
+							"<b>A</b>nachronistic, <b>C</b>onvoluted, <b>E</b>laborate, <b>G</b>ratuitous" for the notes between the lines.
+						</p>
+						<span class="rPad20">
+							<img src="images/bass-clef-notes.png" />
+						</span>
+						<span>
+							<img src="images/bass-clef-open-notes.png" />
+						</span>
+						<p class="space1-8">
+							Finally for the notes above the treble clef, below the bass clef, and everything in between
+							simply bang your head repeatedly on the keys a grand piano.
+						</p>
+
+						<span style="font-size: 2.5em;"><b><i><img style="vertical-align:middle" src="images/forte.gif" /> that</i></b></span>.
+						<br />
+						<p class="space1-8">
+							Instead of all that nonsense, we recommend that you simply:
+						</p>
+						<h2>Memorize a single note on each clef.</h2>
+						<p class="space1-8">
+							This will serve as a reference point which you can use to determine all other notes by simply following (counting?) them up or down.
+							For instance, let's use the treble clef and use the "B" note as our reference.
+						</p>
+						<div class="imgDesc">
+							<img src="images/treble-clef-b.png" />
+							<br />
+							<h2>"B" Note on the Treble Clef</h2>
+						</div>
+						<p class="space1-8">
+							Knowing that the notes are A, B, C, D, E, F, G... A, B, C, D, E, F, G... etc...
+							we can simply count up or down the staff to figure out any note. For instance:
+						</p>
+						<div class="imgDesc">
+							<img src="images/treble-clef-c.png" />
+							<br />
+							<h2>"C" Note on the Treble Clef</h2>
+							<h4 class="vertPad10">"C" comes after "B", so...</h4>
+							"C" sits above the line that "B" sits on.
+						</div>
+						<div class="imgDesc">
+							<img src="images/treble-clef-a.png" />
+							<br />
+							<h2>"A" Note on the Treble Clef</h2>
+							<h4 class="vertPad10">"A" comes before "B", so...</h4>
+							"A" sits below the line that "B" sits on.
+						</div>
+						<div class="imgDesc">
+							<img src="images/treble-clef-g.png" />
+							<br />
+							<h2>"G" Note on the Treble Clef</h2>
+							<h4 class="vertPad10">"G" comes before "A" (the notes loop back to "G", but on a lower octave), so...</h4>
+							"G" sits below the line that "A" sits on.
+						</div>
+
+						<p class="space1-8">
+							Once you read enough sheet music you will simply remember all the notes. Now that you know how to read the notes,
+							all you have to do is read them from left to right!
+							Oh and up and down as well. "<i>WTF?</i>" you say?
+							Yep, notes above/below each other on the same staff are played simultaneously.
+							That's called a chord, Beethoven.
+						</p>
+
+						<p class="space1-8">
+							Now that you can read sheet music and know the notes, grab your instrument and make some noise!
+						</p>
+						<br /><br />
+						<h1 class="fontsize2">How to Read Sheet Music for Pianists</h1>
+						<br /><br />
+						Here we have the notes (and octaves) written on the keys of a ridiculously simple piano.
+						Play it if you like. We won't judge.<br /><br />
+						<img border="0" src="images/24keymap2.png" usemap="#Map">
+						<map name="Map" id="Map">
+
+							<area target="" alt="" title="c2" href="javascript:ply(15);" coords="1,45,11,45,11,123,19,123,19,164,1,164" shape="poly">
+							<area target="" alt="" title="C2" href="javascript:ply(16);" coords="12, 44, 24,122" shape="rect">
+							<area target="" alt="" title="d2" href="javascript:ply(17);" coords="24, 44, 24,122, 19,122, 19,163, 38,163, 38,122, 33,122, 33,45" shape="poly">
+							<area target="" alt="" title="D2" href="javascript:ply(18);" coords="34, 44, 45,122" shape="rect">
+							<area target="" alt="" title="e2" href="javascript:ply(19);" coords="46, 44, 46,122, 40,122, 40,163, 56,163, 56,44" shape="poly">
+							<area target="" alt="" title="f2" href="javascript:ply(20);" coords="58, 44, 58,162, 74,162, 74,123, 66,123, 66,44" shape="poly">
+							<area target="" alt="" title="F2" href="javascript:ply(21);" coords="67, 44, 78,122" shape="rect">
+							<area target="" alt="" title="g2" href="javascript:ply(22);" coords="78, 44, 78,123, 76,123, 76,162, 92,162, 92,123, 88,123, 88,44" shape="poly">
+							<area target="" alt="" title="G2" href="javascript:ply(23);" coords="88, 44, 99,120" shape="rect">
+							<area target="" alt="" title="a2" href="javascript:ply(24);" coords="99, 44, 99,123, 95,123, 95,162, 111,162, 111,123, 109,123, 109,44" shape="poly">
+							<area target="" alt="" title="A2" href="javascript:ply(25);" coords="109,44, 120,121" shape="rect">
+							<area target="" alt="" title="b2" href="javascript:ply(26);" coords="121,44, 121,121, 113,122, 113,162, 129,162, 129,44" shape="poly">
+
+							<area target="" alt="" title="c3" href="javascript:ply(27);" coords="131,44, 131,162, 149,162, 149,123, 142,123, 142,44" shape="poly">
+							<area target="" alt="" title="C3" href="javascript:ply(28);" coords="142,44, 153,120" shape="rect">
+							<area target="" alt="" title="d3" href="javascript:ply(29);" coords="154,44, 154,123, 150,122, 150,162, 168,162, 168,122, 163,122, 163,44" shape="poly">
+							<area target="" alt="" title="D3" href="javascript:ply(30);" coords="164,44, 175,121" shape="rect">
+							<area target="" alt="" title="e3" href="javascript:ply(31);" coords="176,44, 176,121, 169,122, 170,162, 186,162, 186,44" shape="poly">
+							<area target="" alt="" title="f3" href="javascript:ply(32);" coords="187,44, 187,162, 204,162, 204,122, 196,122, 196,44" shape="poly">
+							<area target="" alt="" title="F3" href="javascript:ply(33);" coords="197,44, 207,122" shape="rect">
+							<area target="" alt="" title="g3" href="javascript:ply(34);" coords="209,44, 209,123, 204,122, 204,162, 223,162, 223,122, 219,122, 219,44" shape="poly">
+							<area target="" alt="" title="G3" href="javascript:ply(35);" coords="219,44, 228,122" shape="rect">
+							<area target="" alt="" title="a3" href="javascript:ply(36);" coords="230,44, 230,123, 225,122, 225,162, 242,162, 242,122, 239,122, 239,44" shape="poly">
+							<area target="" alt="" title="A3" href="javascript:ply(37);" coords="240,44, 250,122" shape="rect">
+							<area target="" alt="" title="b3" href="javascript:ply(38);" coords="250,44, 250,121, 243,122, 243,162, 260,162, 260,44" shape="poly">  <!-- 74 from e to b -->
+
+						</map>
+						<!--<script type="text/javascript">
+		var pianoNoteMin = 15;
+		var pianoNoteMax = 38;
+	</script>
+	<script type="text/javascript" src="/lib/audioFunctions.js"></script>-->
+						<!--
+	<a href="javascript:openJSWin('/documents/keyMaps/61.htm', 'keymap', 986, 240)">
+	<img border="0" src="/documents/keyMaps/37keymap.gif" /></a>
+	-->
+						<br />
+						<b>Keys, Notes and Octaves... oh my!</b>
+
+						<p class="space1-8">
+							A full sized piano has a whopping 88 keys. Keyboards will usually have 76 keys, 61 keys, 49 keys or 37 keys.
+							Come back later to see all the different <b>
+								<a href="javascript:alert('sorry, this is a work in progress!')">
+									<!--openJSWin('/documents/keyMaps/61.htm', 'keymap', 986, 240)-->
+									piano key maps
+								</a>
+							</b>?
+						</p>
+
+						<p class="space1-8"> Here's a simple example of sheet music played on a piano - the scale of &quot;f&quot; played on two octaves:</p>
+						<blockquote>
+							<p class="space1-8">
+								<img border="0" src="images/notesAnimated2.gif" /><br />
+							</p>
+						</blockquote>
+						<br />
+
+
+
+
+						<h1 id="tips" class="fontsize2">Advanced Tips: How to Sight Read Sheet Music</h1>
+						<br /><br />
+						<h3>F the Note Names</h3>
+						<p class="space1-8">
+							By "F" we meant "Forget". But not completely. Reading and playing sheet music by mentally converting
+							sheet music into note names into hand movements is how many beginners learn to play music.
+							However, advanced musicians don't need to identify <b>all</b> the note names as they play.
+							To do so would be a nearly impossible mental task
+							for anyone playing an advanced piece of music. The fastest way to read sheet music
+							is to just know that a note equals a specific key (so you don't even think about the name of the note).
+							The good news is this will happen naturally the more you read music.
+							But it might take a little bit of practice. Okay, a <i>lot</i> of practice.
+						</p>
+						<h3>See the Distance</h3>
+						<p class="space1-8">
+							A common technique (especially useful with chords) is to use the
+							vertical distance between notes as the distance to move on the piano.
+							Some even recommend to rotate your sheet music clockwise 90 degrees
+							so the notes on the sheet (somewhat) vertically align to the piano keys.
+							What you are doing in this exercise is identifying how far apart notes are from each other and
+							moving that same distance on the piano. Once you can quickly
+							identify the distances (aka intervals) in the sheet music and can move the same distance on
+							the piano without looking at your hands then you will be a sight reading master.
+							This is much harder than it sounds. Good luck.
+						</p>
+						<h3>Improve Your Pitch</h3>
+						<p class="space1-8">
+							While there is some evidence that pitch detection comes more naturally to some,
+							improving your perfect/absolute and relative pitch is possible and will help you be an all around better
+							musician and should also help with sight reading.
+							A good exercise to test your pitch sense is to sing/hum/whistle a random note (pick a note, any note)
+							and then try to play that same note on your
+							instrument. You might be surprised at how bad you are at this. It's not too late to quit now.
+							Maybe try your hand at stamp collecting?
+							If we haven't convinced you yet to throw in the towel,
+							checkout this site to test (and possibly improve) your
+							<a target="_blank" href="http://pitchimprover.com/index.php?type=Perfect">tonal recognition</a> abilities.
+						</p>
+						<h3>Your Tip Here</h3>
+						<p class="space1-8">
+							We would love to share more tips with you but we are actually quite terrible at sight reading.
+							Don't worry, the tips you just half read were written by people who claimed they were
+							better than some at sight reading.
+							Since you are still reading this, you are probably just as bad as we are.
+							But if you are better than slightly terrible at sight reading, won't you help us out by posting your
+							tips and knowledge in the comments below?
+
+						</p>
+						<br /><br />
+						<h1 class="fontsize2">Alternatives to Sheet Music</h1>
+						<p class="space1-8">
+							Had enough yet? We tried to warn you that sheet music is complicated.
+							But before you throw down your instrument and take up quilting, there is one thing you should know.
+							The sheet music we know and love/hate today was developed - nay popularized - by people in the 15th century.
+							These people used toxic lead in their paint
+							<sup>[<a target="_blank" href="https://en.wikipedia.org/wiki/Caravaggio">1</a>]</sup>
+							and believed the earth was the center of the universe.
+							But there's a new notation on the scene, and it's a bit more up to date than the one
+							brought forth by medieval rapscallions.
+							Lucky for you we are all about this next best thing...
+							called tablature (or tabs, if you're in a hurry).  What sayeth thou?
+						</p>
+
+
+
+						<div class=" pad10 inlineBlock">
+							<a class="fontsize1-3b" href="how-to-read-piano-tab-chords.html">How to Read Piano Tabs</a><br />
+							<a href="how-to-read-piano-tab-chords.html" style="color:#00ff21">
+								<div style="  position: relative;  text-align: center;">
+									<img src="images/howToReadPianoTabs2.png" alt="How to Read Piano Tab" />
+									<div style="font-size:2.5em; text-shadow: 2px 2px 14px black; position:absolute; top: 50%; left: 50%; transform:translate(-50%, -50%);">
+										<b>Piano Tab Guide</b>
+									</div>
+								</div>
+							</a>
+						</div>
+
+						<div class="pad10 inlineBlock">
+							<a class="fontsize1-3b" href="how-to-read-guitar-tab-chords.html">How to Read Guitar Tabs</a><br />
+							<a href="how-to-read-guitar-tab-chords.html" style="color:#00ff21">
+								<div style="position: relative; text-align: center;">
+									<img src="images/howToReadGuitarTabs2.png" alt="How to Read Guitar Tabs" />
+									<div style="font-size:2.5em; text-shadow:2px 2px 14px black; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+										<b>Guitar Tab Guide</b>
+									</div>
+								</div>
+							</a>
+						</div>
+
+
+
+						<!--<h2>
+		<a href="how-to-read-piano-tab-chords.html">
+			<img border="0" src="images/keyboardIcon.gif" />
+			How to Read Piano Tabs
+		</a>
+	</h2>
+
+	<span class="grey">&nbsp;&nbsp;&nbsp;&nbsp; - and - &nbsp;&nbsp;&nbsp;&nbsp;</span>
+
+
+	<br />
+	<h2>
+		<a href="how-to-read-guitar-tab-chords.html">
+			<img border="0" src="images/guitar.gif" />
+			How to Read Guitar Tabs
+		</a>
+	</h2>-->
+
+						<br />
+
+						<p class="space1-8">
+							Before you <i>real</i> musicians get too huffy, we should mention sheet music has vastly
+							<del>improved</del> changed
+							since the days when witches were burned at the stake.
+							And even though the
+							<b><a href="how-to-read-piano-tab-chords.html">tab format</a></b> is faster and easier,
+							we realize some of you fuddy duddies still prefer your sheet music, wearing your powdered wigs and
+							riding in your horse drawn carriages.
+							For you classically trained old timers, we are working on tools to convert tabs directly into sheet music!
+						</p>
+
+
+
+						<br />
+						<p class="space1-8">
+							Let's make some beautiful music together!<br />
+						</p>
+						<p class="space1-8 blackOnGrey">
+							We are classically trained, unconventionally educated professional amateur musicians.
+							While we find tabs easier to learn, read and write than sheet music notation
+							there is admittedly a trade-off:
+							tabs do not presently provide the same level of detail, complexity and frustration that sheet music does.
+							Good thing
+							<a href="https://www.youtube.com/watch?v=oOlDewpCfZQ" target="_blank">music these days is made from the same 4 chords</a>.
+							<!--You got a problem with that?  <a href="/play">Do something about it.</a> You got a problem with us?
+							Tell us all about it in the comments below, unless you're chicken.
+							If so, why don't you make like a tree and get out of here.-->
+
+
+
+						</p>
+
+					</div>
+
+
+
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+
+			<div class="vertPad10 fontsize9">
+				Last Updated: Nov 19, 2025 
+			</div>
+
+
+
+		</div>
+
+
+		{% include right.html %}
+
+	</div>
+
+
+	{% include footer.html %}
+
+</body>
+</html>
+

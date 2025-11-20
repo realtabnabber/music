@@ -16,56 +16,6 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<style>
-		* {
-			box-sizing: border-box;
-		}
-
-		.menu {
-			float: left;
-			width: 10%;
-		}
-
-		.menuitem {
-			padding: 8px;
-			margin-top: 7px;
-			border-bottom: 1px solid #f1f1f1;
-		}
-
-		.main {
-			float: left;
-			width: 60%;
-			padding: 0 20px;
-			overflow: hidden;
-		}
-
-		.right {
-			background-color: lightblue;
-			float: left;
-			width: 20%;
-			padding: 10px 15px;
-			margin-top: 7px;
-		}
-
-		@media only screen and (max-width:800px) {
-			/* For tablets: */
-			.main {
-				width: 80%;
-				padding: 0;
-			}
-
-			.right {
-				width: 100%;
-			}
-		}
-
-		@media only screen and (max-width:500px) {
-			/* For mobile phones: */
-			.menu, .main, .right {
-				width: 100%;
-			}
-		}
-	</style>
 	<script type="text/javascript" >
         //var navToggle = false;
         //function toggleNav() {
@@ -82,17 +32,71 @@
 
 	{% include header.html %}
 
-
 	<div style="overflow:auto">
 		<div class="menu">
-			<div class="menuitem grey fontsize1-3b">Guitar Tabs</div>
-			<div class="menuitem grey">Piano Tabs (coming soon?)</div>
+			
+			{% include left.html %}
 
 		</div>
-
+		
 		<div class="main">
 
-			<h3>Your Guitar Tab</h3>
+			<div class=" pad10">
+
+
+				<div class="lPad10">
+
+					<h2 class="inlineBlock">
+						Play Any Song. On Any Instrument. No Sheet Music Required.
+						<!--<b>Tabs</b> are instructions on how to play music, often consisting of notes and chords.-->
+					</h2>
+
+					<div class="lPad20">
+						<p class="space1-6">
+
+
+							Heard a song you love and want to play it now? Tabs are the fastest way to make it happen.
+
+							Transform the web's vast library of guitar tabs into a readable format for piano, flute or even the mighty vuvuzela.
+
+
+							<!--Tabs are simple music compositions that are similar to, but less detailed than, traditional <a href="/how-to-read-sheet-music-notes/">sheet music</a>,
+							making them ideal for beginners. While most tabs are written for the standard six string guitar,
+							they can easily be translated to more readable form so that virtually any instrument can be used.
+
+
+																					Cut through the complexity of traditional sheet music notation with direct, beginner-friendly tabs.
+						Tabs are the simplest way to learn music, cutting through the complexity of traditional sheet music.
+
+							Our converter translates guitar tabs into a universal, more readable format for piano, flute, vuvuzela, and more.-->
+							Your favorite song, on your instrument, is one click away. Convert a tab below!
+
+
+						</p>
+
+					</div>
+
+
+
+				</div>
+
+			</div>
+
+
+
+
+
+
+
+
+
+
+
+			<div class="text-center vertPad20 fontsize8 whiteGrayGradient">
+				<h2>Guitar Tab to Piano Tab Converter</h2>
+			</div>
+
+			<h4>Your Guitar Tab</h4>
 
 			<form action="" method="GET" name="tnForm">
 				<span class="lPad10 demph">
@@ -106,71 +110,121 @@
 				<br />
 				<div class=" lPad20 vertPad10">
 					<input type="button" class="padField  fontsize1-1" value="Convert to Piano Tab" name="B1" onClick="javascript: showPianoArea(); convertGuitarToPiano();" />
-
+					<!--<input type="button" class="padField  fontsize1-1" value="Convert to Sheet Music" name="B2" onClick="javascript: showSheetArea(); convertGuitarToSheet();" disabled />-->
 					<!--
 
-		 Auto Fix ( <a href="javascript:fixGuitar();"><img src='/images/instrumentsIconGtrFix.jpg' border='0' alt='Apply fixes for common guitar tab issues' title='Apply fixes for common guitar tab issues'></a>)
+				 Auto Fix ( <a href="javascript:fixGuitar();"><img src='/images/instrumentsIconGtrFix.jpg' border='0' alt='Apply fixes for common guitar tab issues' title='Apply fixes for common guitar tab issues'></a>)
 
 
-		--chordize (prob not needed, side button)
-		--insert staff (prob not needed, will work differently for guitar vs piano, side button)
+				--chordize (prob not needed, side button)
+				--insert staff (prob not needed, will work differently for guitar vs piano, side button)
 
-			Stretch (needs input, may work differently for guitar vs piano, side button)
-		<input type="button" class="padField  demph disabled" value="Stretch" name="B1" onClick="javascript:alert(" coming soon");" />
+					Stretch (needs input, may work differently for guitar vs piano, side button)
+				<input type="button" class="padField  demph disabled" value="Stretch" name="B1" onClick="javascript:alert(" coming soon");" />
 
-						replace (needs multiple inputs)
+								replace (needs multiple inputs) - can do in any text editor tho
 
-						reverse (needs input, may work differently for guitar vs piano)
+								reverse (needs input, may work differently for guitar vs piano)
 
-						transpose / change pitch (needs input, will work differently for guitar vs piano)
+								transpose / change pitch (needs input, will work differently for guitar vs piano)
 
-			-->
+							Tabs to sheet music?
+
+					-->
 				</div>
 
 				<div id="pianoArea" style="display:none;">
-				<h4>Your Piano Tab</h4>
+					<h4>Your Piano Tab</h4>
 					<span class="lPad10 demph">
 						[<a href="javascript:selectAllOutput();">Select All</a>]
 					</span>
 					<textarea name="outputText" rows="2" cols="20" wrap="soft" id="outputTextID" class="smallField" style="height:200px;width:100%;"></textarea>
 					<br />
 					<br />
-                    <h4>Now Play It!</h4>
+					<h4>Now Play It!</h4>
 					<div class="lPad20">
 						<!--<img border="0" src="images/37keymap.gif" style="width:100%">-->
 						UPPERcase = black keys, lowercase = white keys.<br />
 						<img border="0" src="images/49keymapShort.png">
 
 						<!--<br /><br />
-			Layout: 37 keys | 	49 Keys | 61 Keys | 76 Keys | 88 Keys
-							-->
+					Layout: 37 keys | 	49 Keys | 61 Keys | 76 Keys | 88 Keys
+									-->
+						<br />
+						-The numbers indicate the octave.<br />
+						-Lowercase letters (a,b,c,d,e,f,g) are used for the white keys (the natural notes).<br />
+						-Uppercase letters (A,C,D,F,G) are used for the black keys (the sharp and flat notes).<br />
+						
 					</div>
 
 				</div>
+
+
+
+
+
+				<div class="vertPad40">
+
+					<div class=" pad10 inlineBlock">
+						<a class="fontsize1-3b" href="how-to-read-piano-tab-chords.html">How to Read Piano Tabs</a><br />
+						<a href="how-to-read-piano-tab-chords.html" style="color:#00ff21">
+							<div style="  position: relative;  text-align: center;">
+								<img src="images/howToReadPianoTabs2.png" alt="How to Read Piano Tab" />
+								<div style="font-size:2.5em; text-shadow: 2px 2px 14px black; position:absolute; top: 50%; left: 50%; transform:translate(-50%, -50%);">
+									<b>Piano Tab Guide</b>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class="pad10 inlineBlock">
+						<a class="fontsize1-3b" href="how-to-read-guitar-tab-chords.html">How to Read Guitar Tabs</a><br />
+						<a href="how-to-read-guitar-tab-chords.html" style="color:#00ff21">
+							<div style="position: relative; text-align: center;">
+								<img src="images/howToReadGuitarTabs2.png" alt="How to Read Guitar Tabs" />
+								<div style="font-size:2.5em; text-shadow:2px 2px 14px black; position:absolute; top:50%; left:50%; transform:translate(-50%, -50%);">
+									<b>Guitar Tab Guide</b>
+								</div>
+							</div>
+						</a>
+					</div>
+
+					<div class=" pad10 inlineBlock">
+						<a class="fontsize1-3b" href="how-to-read-sheet-music-notes.html">How to Read Sheet Music</a><br />
+						<a href="how-to-read-sheet-music-notes.html" style="color:#00ff21">
+							<div style="  position: relative;  text-align: center;">
+								<img src="images/howToReadSheetMusic2.png" alt="How to Read Sheet Music" />
+								<div style="font-size:2.5em; text-shadow: 2px 2px 14px black; position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%);">
+									<b>Sheet Music Guide</b>
+								</div>
+							</div>
+						</a>
+					</div>
+
+
+				</div>
+
+
+
+
+
 			</form>
-		</div>
 
-		<div class="right">
-			<h3>What's Up?</h3>
-			<div class="vertPad10">
-				Find us at <a href="https://bsky.app/profile/tabnabber.bsky.social"><img border="0" src="https://web-cdn.bsky.app/static/favicon-16x16.png" />Bluesky</a>
-			</div>
-			<div class="vertPad10">
-				Email us at TabNabber<img border="0" src="images/atg.gif" class="vAlignMid">
-			</div>
-
-			<br />
-			<br />
 			<div class="vertPad10 fontsize9">
-				Last Updated: Nov 16, 2025 <!-- Nov 14, 2025 init release --><!-- Nov 16, 2025 auto fix guitar tab strings missing pipes -->
+				Last Updated: Nov 19, 2025 <!-- Nov 14, 2025 init release --><!-- Nov 16, 2025 auto fix guitar tab strings missing pipes --><!--Nov 19, 2025 added how to read tabs, sheet music pages-->
 			</div>
+
+
+
 		</div>
+
+
+		{% include right.html %}
+
 	</div>
 
 
-	<div class="text-center vertPad40 fontsize8 whiteGrayGradient2">
-		&copy; TabNabber 2025
-	</div>
+	{% include footer.html %}
 
 </body>
 </html>
