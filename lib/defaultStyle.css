@@ -1,3 +1,53 @@
+* {
+			box-sizing: border-box;
+		}
+
+		.menu {
+			float: left;
+			width: 10%;
+		}
+
+		.menuitem {
+			padding: 8px;
+			margin-top: 7px;
+			border-bottom: 1px solid #f1f1f1;
+		}
+
+		.main {
+			float: left;
+			width: 70%;
+			padding: 0 20px;
+			overflow: hidden;
+		}
+
+		.right {
+			background-color: lightblue;
+			float: left;
+			width: 20%;
+			padding: 10px 15px;
+			margin-top: 7px;
+		}
+
+		@media only screen and (max-width:800px) {
+			/* For tablets: */
+			.main {
+				width: 80%;
+				padding: 0;
+			}
+
+			.right {
+				width: 100%;
+			}
+		}
+
+		@media only screen and (max-width:500px) {
+			/* For mobile phones: */
+			.menu, .main, .right {
+				width: 100%;
+			}
+		}
+
+
 Body {
 font: 1em Roboto,arial,sans-serif;
 /*NETSCAPE*/
@@ -34,7 +84,6 @@ pre {
     /*width: 800;*/
     max-width: 900px;
     min-width: 200px;
-    
     max-height: 400px;
     min-height: 3em;
     background-color: #f6f6ff;
@@ -43,7 +92,9 @@ pre {
     display: inline-block;
     border-left: 6px solid #1664d9;
     border-right: 6px solid #1664d9;
-    position:relative;
+    position: relative;
+    overflow-x: auto;
+    overflow-y: auto;
 }
 
 pre.sample {
@@ -694,30 +745,6 @@ a.chord:hover span{display: block; text-align: center;
   clear: both;
 }
 
-@media screen and (min-width:800px)  { /* and (max-width:800px) */
-	/* Target landscape smartphones, portrait tablets, narrow desktops */
-	/* #smlHeader { display:none; }*/
-    .uTube {width:560px; height:315px}
-}
-@media screen and (max-width:799px)  { /* and (max-width:800px) */
-	/* Target landscape smartphones, portrait tablets, narrow desktops */
-	/* #smlHeader { display:none; }
-	#lrgHeaderImg { display:none; }*/
-    .uTube {width:560px; height:315px}
-}
-@media screen and (max-width:1060px) {
-    .column  { width: 50%; }
-}
-@media screen and (max-width:755px) {
-    .column  { width: 100%; }
-}
-@media screen and (max-width:479px) {
-	/* Target portrait smartphones */
-	/* #lrgHeaderImg { display:none; }*/
-	/*#lrgTopNav { display:none; }*/
-	#largeHeaderLangs, #lrgLftNav, #lftNavS, #lrgFtr { display:none; }	  
-    .uTube {width:280px; height:160px}
-}
 
 #lrgLftNav, #lftNavS { 
 	width:122px;
