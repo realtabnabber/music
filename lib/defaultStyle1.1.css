@@ -944,3 +944,10 @@ p.space1-6 {
   font-weight: bold;
 }
 
+li {
+    margin: 10px 0;
+    line-height: 1.6em;
+}
+p {
+    line-height: 1.6em;
+}
